@@ -8,11 +8,14 @@ export const Hero: React.FunctionComponent<{ title?: string }> = ({
     // alignItems="center"
     flexDirection="column"
     height="100vh"
+    width="100%"
   >
-    <Heading size="2xl">{title}</Heading>
-    <br />
+    <Heading size="2xl" mb="2">
+      {title}
+    </Heading>
+
     <Heading size="2xl" fontWeight="300" fontStyle="italic">
-      without the basic necessities of life.
+      Without the basic necessities of life.
     </Heading>
   </Flex>
 );

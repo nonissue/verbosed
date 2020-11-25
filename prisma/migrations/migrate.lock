@@ -1,3 +1,6 @@
 # Prisma Migrate lockfile v1
 
 20201125065105-init
+20201125073928-add-published--published-date
+20201125074130-published----publish
+20201125074352-publish----default-true

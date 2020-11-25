@@ -3,7 +3,7 @@
 
 datasource db {
   provider = "sqlite"
-  url      = env("DATABASE_URL")
+  url = "***"
 }
 
 generator client {
@@ -16,7 +16,7 @@ model Word {
   updatedAt   DateTime @default(now()) @map(name: "updated_at")
   title       String   @unique
   definition  String
-  published   Boolean  @default(true)
+  published   Boolean?
   publishDate DateTime @default(now()) @map(name: "publish_date")
 
   @@map(name: "words")

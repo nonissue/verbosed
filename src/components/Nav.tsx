@@ -1,4 +1,4 @@
-import { Link as ChakraLink, Button } from "@chakra-ui/react";
+import { Link as ChakraLink } from "@chakra-ui/react";
 
 import { Container, DarkModeSwitch } from ".";
 
@@ -7,10 +7,8 @@ export const Nav: React.FunctionComponent = () => (
     flexDirection="row"
     position="fixed"
     top="1rem"
-    // justifyContent="flex-start"
-    // justifyItems="flex-start"
     width="100%"
-    maxWidth="48rem"
+    // maxWidth="48rem"
     py={2}
   >
     <ChakraLink fontWeight="800" href="/" mr="4">
@@ -31,6 +29,6 @@ export const Nav: React.FunctionComponent = () => (
       Suggest
     </ChakraLink>
 
-    <DarkModeSwitch />
+    <DarkModeSwitch marginLeft="auto" />
   </Container>
 );
