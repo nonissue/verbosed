@@ -1,0 +1,38 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "npm",
+      "script": "dev",
+      "problemMatcher": [],
+      "label": "yarn: dev",
+      "detail": "next dev",
+      "presentation": {
+        "group": "dev"
+      },
+      "group": "build"
+    },
+    {
+      "type": "npm",
+      "script": "migratedb",
+      "problemMatcher": [],
+      "label": "prisma: update",
+      "detail": "run prisma up/save/generate",
+      "presentation": {
+        "group": "db"
+      }
+    },
+    {
+      "label": "start dev",
+      "dependsOn": ["yarn: dev", "prisma: studio"],
+      "problemMatcher": [],
+      "detail": "starts nextjs and prisma studio",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    }
+  ]
+}
