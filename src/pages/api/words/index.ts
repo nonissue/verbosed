@@ -30,7 +30,7 @@ async function handleGET(res: NextApiResponse) {
   return res.status(200).json(result);
 }
 
-// - [ ] fetch definition after create, then update
+// - [ ] fetch definition IF MISSING after create, then update
 // - [x] handle collision
 async function handlePOST(req: NextApiRequest, res: NextApiResponse) {
   const { title } = req.body;

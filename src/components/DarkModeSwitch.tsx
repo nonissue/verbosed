@@ -11,11 +11,6 @@ export const DarkModeSwitch: React.FunctionComponent<ColorModeSwitcherProps> = (
   return (
     <IconButton
       icon={isDark ? <MoonIcon /> : <SunIcon />}
-      // position="fixed"
-      // top="1rem"
-      // right="1rem"
-      // alignContent="flex-end"
-      alignSelf=""
       aria-label="Toggle UI appearance"
       variant="ghost"
       onClick={toggleColorMode}

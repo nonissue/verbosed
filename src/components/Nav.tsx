@@ -1,4 +1,4 @@
-import { Link as ChakraLink } from "@chakra-ui/react";
+import { Link as ChakraLink, Flex } from "@chakra-ui/react";
 
 import { Container, DarkModeSwitch } from ".";
 
@@ -11,24 +11,34 @@ export const Nav: React.FunctionComponent = () => (
     // maxWidth="48rem"
     py={2}
   >
-    <ChakraLink fontWeight="800" href="/" mr="4">
-      WOTD
-    </ChakraLink>
-    <ChakraLink isExternal href="https://chakra-ui.com" flexGrow={0} mx={2}>
-      {/* <Button width="100%" variant="outline" colorScheme="gray"> */}
-      Archive
-      {/* </Button> */}
-    </ChakraLink>
-
-    <ChakraLink
-      isExternal
-      href="https://github.com/vercel/next.js/blob/canary/examples/with-chakra-ui-typescript"
-      flexGrow={0}
-      mx={2}
+    <Flex
+      justifyContent="space-between"
+      // justifyItems="flex-end"
+      alignItems="center"
+      // flexDirection="column"
+      w="100%"
+      fontSize={["1.1rem", "1.3rem", "1rem", "1rem"]}
     >
-      Suggest
-    </ChakraLink>
+      <ChakraLink
+        fontWeight="800"
+        href="/"
+        mr="4"
+        fontSize={["1.5em", "1.5rem"]}
+      >
+        WOTD
+      </ChakraLink>
 
-    <DarkModeSwitch marginLeft="auto" />
+      <Flex align="right" alignItems="center">
+        <ChakraLink href="/archive" mx={2}>
+          Archive
+        </ChakraLink>
+
+        <ChakraLink href="/suggest" mx={2} marginRight="4">
+          Suggest
+        </ChakraLink>
+
+        <DarkModeSwitch marginLeft="auto" p="1" size="md" borderRadius="2rem" />
+      </Flex>
+    </Flex>
   </Container>
 );

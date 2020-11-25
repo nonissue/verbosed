@@ -1,9 +1,8 @@
-import { Hero } from "../components/Hero";
-import { Container } from "../components/Container";
-import { Nav } from "../components";
+import { Container, Hero, Nav } from "../components";
 
+// fetch latest word
 const Index: React.FunctionComponent = () => (
-  <Container height="100vh">
+  <Container height="100vh" overflowY="hidden">
     <Nav />
     <Hero />
   </Container>

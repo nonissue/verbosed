@@ -8,14 +8,19 @@ export const Hero: React.FunctionComponent<{ title?: string }> = ({
     // alignItems="center"
     flexDirection="column"
     height="100vh"
-    width="100%"
+    // height="50vh"
+    // maxH="100vh"
+    // overflowY="hidden"
+    // width="100%"
   >
-    <Heading size="2xl" mb="2">
+    <Heading size="2xl" mb="4">
       {title}
     </Heading>
 
-    <Heading size="2xl" fontWeight="300" fontStyle="italic">
-      Without the basic necessities of life.
+    <Heading size="lg" fontWeight="300" fontStyle="italic" lineHeight="1.3">
+      Without the basic necessities of life. With the necessities of life. With
+      the basic wants of life. Absent the basic needs of life. Without the basic
+      necessities of life. Without the basic necessities of life.
     </Heading>
   </Flex>
 );

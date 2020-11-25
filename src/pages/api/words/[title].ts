@@ -3,7 +3,6 @@ import { NextApiRequest, NextApiResponse } from "next";
 import { PrismaClient } from "@prisma/client";
 const prisma = new PrismaClient();
 
-// DELETE /api/post/:id
 export default async function handle(
   req: NextApiRequest,
   res: NextApiResponse
