@@ -1,5 +1,6 @@
 html,
 body {
-  position: fixed; /* prevent horizontal scroll */
+  /* prevent horizontal scroll */
+  /* position: fixed;  */
   width: 100%;
 }

@@ -33,12 +33,16 @@ async function handleGET(res: NextApiResponse) {
 // - [ ] fetch definition IF MISSING after create, then update
 // - [x] handle collision
 async function handlePOST(req: NextApiRequest, res: NextApiResponse) {
-  const { title } = req.body;
+  const { title, definition, published, publishedDate } = req.body;
+  console.log(req.body);
+
+  const formattedDate = new Date(publishedDate);
+  console.log(formattedDate);
 
   let result;
   try {
     result = await prisma.word.create({
-      data: { title, definition: "test definition" },
+      data: { title, definition, published, publishedDate: formattedDate },
     });
   } catch (error) {
     if (error.code === "P2002") {

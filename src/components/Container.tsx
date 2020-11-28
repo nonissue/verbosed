@@ -6,9 +6,9 @@ export const Container: React.FunctionComponent<FlexProps> = (props) => {
       direction="column"
       alignItems="center"
       justifyContent="flex-start"
-      maxW="min(65ch, 100%)"
+      // maxW="min(65ch, 100%)"
       mx="auto"
-      px={["6", "6", "4", "4"]}
+      // px={["6", "6", "4", "4"]}
       {...props}
     />
   );
