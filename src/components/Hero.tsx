@@ -8,8 +8,12 @@ export const Hero: React.FunctionComponent<{ title?: string }> = ({
     // alignItems="center"
     flexDirection="column"
     height="100vh"
+    width="100vw"
+    maxW="min(65ch, 100%)"
+    m="auto"
     // height="50vh"
     // maxH="100vh"
+    px={["6", "6", "4", "4"]}
     // overflowY="hidden"
     // width="100%"
   >

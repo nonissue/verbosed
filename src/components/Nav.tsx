@@ -18,15 +18,12 @@ export const Nav: React.FunctionComponent = () => {
   const navColor = useColorModeValue("gray.600", "gray.400");
   const navBg = useColorModeValue(
     "hsla(210, 38%, 95%, 0.7)",
-    // "hsla(230, 21%, 20%, 0.7)"
-    // "hsla(230, 21%, 11%, 0.5)"
+
     "hsla(220, 25.71428571428571%, 11.725490196078432%, 0.9)"
   );
   const mobileNavBg = useColorModeValue(
     "hsla(0, 0%, 100%, 0.5)",
-    // "hsla(230, 40%, 5%, 0.5)"
     "hsla(220, 25.71428571428571%, 11.725490196078432%, 0.1)"
-    // "hsla(215, 19.3%, 20.5%, 0.1)"
   );
 
   const [mobileNavShown, setMobileNavShown] = useState(false);
@@ -47,7 +44,6 @@ export const Nav: React.FunctionComponent = () => {
         width: "100%",
         height: "100%",
         zIndex: "-1",
-        // background: "#ff0000",
       }}
       style={{
         backdropFilter: "blur(5px)",
@@ -71,11 +67,7 @@ export const Nav: React.FunctionComponent = () => {
             textColor={logoColor}
             fontSize={["1.2em", "1.5em"]}
             letterSpacing="0.01em"
-            // textDecoration="underline"
-
-            textDecorationSkip="underline"
-            // textDecorationThickness="1px"
-            style={{ textDecorationThickness: "0.05em" }}
+            // style={{ textDecorationThickness: "0.05em" }}
             _hover={{ textDecoration: "none", color: "orange.400" }}
           >
             {/* Word of the Day */}
@@ -88,7 +80,6 @@ export const Nav: React.FunctionComponent = () => {
                 marginLeft="auto"
                 p="1"
                 size="sm"
-                // size={["sm", "md"]}
                 borderRadius="2rem"
               />
               <IconButton
@@ -144,8 +135,6 @@ export const Nav: React.FunctionComponent = () => {
           position: "absolute",
           zIndex: "-1",
         }}
-        //  borderBottom: "1px",
-        // borderBottomColor: navBorderBottom,
       >
         {mobileNavShown && (
           <Flex
