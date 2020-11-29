@@ -7,10 +7,9 @@ export default class Document extends NextDocument {
     return (
       <Html>
         <Head>
-          <link
-            href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
-            rel="stylesheet"
-          />
+          <meta charSet="UTF-8" />
+          <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
+          <meta name="apple-mobile-web-app-capable" content="yes" />
         </Head>
         <body>
           {/* Make Color mode to persists when you refresh the page. */}
