@@ -1,19 +1,6 @@
-import {
-  Stack,
-  Box,
-  Accordion,
-  Icon,
-  Flex,
-  Text,
-  AccordionButton,
-  AccordionIcon,
-  AccordionPanel,
-  AccordionItem,
-} from "@chakra-ui/react";
-import { NextChakraLink } from "src/components";
+import { Stack, Box, Accordion, Icon } from "@chakra-ui/react";
 import { ArchiveWordList } from "src/interfaces";
 import { BiParagraph } from "react-icons/bi";
-import { RiParagraph } from "react-icons/ri";
 
 export const List: React.FunctionComponent<{ list: ArchiveWordList }> = ({
   list,
