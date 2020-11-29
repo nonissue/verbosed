@@ -13,7 +13,7 @@ import { RiSubtractLine } from "react-icons/ri";
 
 const About: React.FunctionComponent = () => {
   const listDecoration = useColorModeValue("gray.400", "gray.600");
-  const creditsText = useColorModeValue("gray.500", "gray.500");
+  const creditsText = useColorModeValue("gray.600", "gray.500");
   return (
     <Container>
       <Nav />
@@ -27,14 +27,14 @@ const About: React.FunctionComponent = () => {
       >
         <Heading title="About" />
 
-        <Text fontSize="lg">
+        <Text fontSize="sm" lineHeight="1.6" mb="4" fontStyle="italic">
           A collection of words that I may or may not find interesting and that
           I may or may not understand.
         </Text>
 
         <SimpleGrid columns={[1, null, 3, 3]} spacing={[2, 2, 10, 10]}>
           <Box>
-            <Text fontSize="xl" pt="4" fontWeight="500" fontFamily="heading">
+            <Text fontSize="xl" pt="4" fontWeight="400" fontFamily="serif">
               Technologies
             </Text>
             {/* <Heading title="Technologies" mb="2" fontSize="xl" /> */}
@@ -48,11 +48,7 @@ const About: React.FunctionComponent = () => {
                   mb="3px"
                   verticalAlign="middle"
                 />
-                <Link
-                  // color={technologyLinkColor}
-                  href="https://nextjs.org"
-                  variant="external"
-                >
+                <Link href="https://nextjs.org" variant="external">
                   Next.js
                 </Link>
               </ListItem>
@@ -64,11 +60,7 @@ const About: React.FunctionComponent = () => {
                   mb="3px"
                   verticalAlign="middle"
                 />
-                <Link
-                  // color={technologyLinkColor}
-                  variant="external"
-                  href="https://prisma.io"
-                >
+                <Link variant="external" href="https://prisma.io">
                   Prisma
                 </Link>
               </ListItem>
@@ -80,11 +72,7 @@ const About: React.FunctionComponent = () => {
                   mb="3px"
                   verticalAlign="middle"
                 />
-                <Link
-                  href="https://next.chakra-ui.com"
-                  // color={technologyLinkColor}
-                  variant="external"
-                >
+                <Link href="https://next.chakra-ui.com" variant="external">
                   Chakra-UI
                 </Link>
               </ListItem>
@@ -135,7 +123,7 @@ const About: React.FunctionComponent = () => {
             </List>
           </Box>
           <Box>
-            <Text fontSize="xl" pt="4" fontWeight="500" fontFamily="heading">
+            <Text fontSize="xl" pt="4" fontWeight="500" fontFamily="serif">
               Credits
             </Text>
             <Box textColor={creditsText}>
@@ -163,10 +151,10 @@ const About: React.FunctionComponent = () => {
                 </Link>
               </Text>
             </Box>
-            <Text fontSize="xl" fontWeight="500" pt="4" fontFamily="heading">
+            <Text fontSize="xl" fontWeight="500" pt="4" fontFamily="serif">
               Version
             </Text>
-            <Text fontFamily="mono" fontSize="sm" color="gray.400" pt="2">
+            <Text fontFamily="body" fontSize="" color={listDecoration} pt="2">
               0.0.1 (beta)
             </Text>
           </Box>

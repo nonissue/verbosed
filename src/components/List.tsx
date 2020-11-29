@@ -43,28 +43,7 @@ export const List: React.FunctionComponent<{ list: ArchiveWordList }> = ({
                 />
                 {word.definition}
               </Box>
-              {/* <Box
-                fontSize="xs"
-                letterSpacing="0.1em"
-                textTransform="uppercase"
-                fontWeight="300"
-                textAlign="right"
-                textColor="gray.400"
-              >
-                <NextChakraLink href="/">More</NextChakraLink>
-              </Box> */}
             </Box>
-            // <AccordionItem key={word.id} border="0px" borderBottom="1px">
-            //   <AccordionButton py="1" px="0">
-            //     <Box flex="1" textAlign={alignment} fontWeight="600  ">
-            //       {word.title} {alignment} {index}
-            //     </Box>
-            //     <AccordionIcon />
-            //   </AccordionButton>
-            //   <AccordionPanel pt="1" px="0" pb="2" fontSize="sm">
-            //     {word.definition}
-            //   </AccordionPanel>
-            // </AccordionItem>
           );
         })}
       </Accordion>

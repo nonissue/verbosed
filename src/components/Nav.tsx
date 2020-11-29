@@ -17,11 +17,14 @@ import { DarkModeSwitch } from ".";
 
 export const Nav: React.FunctionComponent = () => {
   const logoColor = useColorModeValue("gray.900", "gray.50");
-  const ofthedayColor = useColorModeValue("#2D3748", "#CBD5E0");
+  const ofthedayColor = useColorModeValue(
+    "hsla(213.75, 30.25%, 35.0%, 1)",
+    "hsla(213.75, 20.25%, 75.0%, 1)"
+  );
   const navBorderBottom = useColorModeValue("gray.200", "gray.900");
   const navColor = useColorModeValue("gray.700", "gray.200");
   const navBg = useColorModeValue(
-    "hsla(210, 30%, 99%, 0.7)",
+    "hsla(210, 30%, 99%, 0.9)",
     "hsla(220, 25.7%, 11.7%, 0.8)"
   );
   const mobileNavBg = useColorModeValue(
@@ -79,11 +82,11 @@ export const Nav: React.FunctionComponent = () => {
             fontSize={["1.5em", "1.35em"]}
             letterSpacing="-0.05em"
             lineHeight="1"
-            // textTransform="uppercase"
-            _hover={{ textDecoration: "none", color: "gray.400" }}
+            _hover={{ textDecoration: "none", opacity: 0.6 }}
+            fontWeight="800"
           >
             <Flex alignItems="center">
-              <b style={{ fontWeight: 700 }}>word</b>
+              <Text>word</Text>
               &nbsp;
               <Text
                 fontSize="0.69em"
@@ -93,14 +96,6 @@ export const Nav: React.FunctionComponent = () => {
                 color={ofthedayColor}
                 textTransform="lowercase"
                 textDecoration="underline"
-                // style={{
-                //   fontSize: "0.66em",
-                //   fontWeight: 400,
-                //   fontFamily: "'Libre Baskerville', serif",
-                //   color: ofthedayColor,
-                //   textTransform: "lowercase",
-                //   textDecoration: "underline",
-                // }}
               >
                 of&nbsp;the&nbsp;Day
               </Text>

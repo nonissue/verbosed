@@ -19,7 +19,7 @@ const Suggest: React.FunctionComponent = () => {
         />
 
         <Box justifyItems="left" width="100%">
-          Coming Soon
+          Functionality to accept ideas coming soon.
         </Box>
       </Box>
     </Container>
