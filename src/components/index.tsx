@@ -6,6 +6,7 @@ import { Footer } from "./Footer";
 import { Hero } from "./Hero";
 import { Main } from "./Main";
 import { List } from "./List";
+import { Heading } from "./Misc";
 
 export {
   Container,
@@ -16,4 +17,5 @@ export {
   Main,
   List,
   NextChakraLink,
+  Heading,
 };

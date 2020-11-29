@@ -1,5 +1,5 @@
-import { Box, Heading } from "@chakra-ui/react";
-import { Container, Nav, List } from "src/components";
+import { Box } from "@chakra-ui/react";
+import { Container, Nav, List, Heading } from "src/components";
 import { GetServerSideProps } from "next";
 import { ArchiveWordList } from "src/interfaces";
 
@@ -39,18 +39,10 @@ const Archive: React.FunctionComponent<{ data: string }> = ({ data }) => {
         m="auto"
       >
         <Heading
-          size="lg"
-          mb="4"
-          mt="8"
-          justifyItems="left"
-          width="100%"
-          fontFamily="serif"
-          fontWeight="500"
+          title="Archive"
           // letterSpacing="0.05em"
           // textTransform="uppercase"
-        >
-          Archive
-        </Heading>
+        />
 
         <Box justifyItems="left" width="100%">
           {wordList && <List list={wordList} />}

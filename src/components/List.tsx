@@ -1,6 +1,7 @@
 import { Stack, Box, Accordion, Icon } from "@chakra-ui/react";
 import { ArchiveWordList } from "src/interfaces";
 import { BiParagraph } from "react-icons/bi";
+import { RiExternalLinkLine } from "react-icons/ri";
 
 export const List: React.FunctionComponent<{ list: ArchiveWordList }> = ({
   list,
@@ -17,15 +18,22 @@ export const List: React.FunctionComponent<{ list: ArchiveWordList }> = ({
           return (
             <Box key={word.id} mb="4">
               <Box flex="1" textAlign={alignment} fontWeight="600">
-                {word.title}
+                {word.title}{" "}
+                <Icon
+                  aria-label="more info"
+                  as={RiExternalLinkLine}
+                  verticalAlign="text-top"
+                  color="gray.500"
+                  mt="1px"
+                />
               </Box>
               <Box
                 textAlign={alignment}
-                fontFamily="serif"
-                fontSize="md"
+                fontFamily="body"
+                fontSize="sm"
+                lineHeight="1.7"
                 pb="1"
               >
-                {/* <Text> */}
                 <Icon
                   as={BiParagraph}
                   mr="1"
@@ -34,7 +42,6 @@ export const List: React.FunctionComponent<{ list: ArchiveWordList }> = ({
                   display="inline"
                 />
                 {word.definition}
-                {/* </Text> */}
               </Box>
               {/* <Box
                 fontSize="xs"
