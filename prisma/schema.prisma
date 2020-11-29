@@ -1,23 +1,20 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
+generator client {
+  provider = "prisma-client-js"
+}
 
 datasource db {
   provider = "sqlite"
   url      = env("DATABASE_URL")
 }
 
-generator client {
-  provider = "prisma-client-js"
-}
-
 model Word {
   id            Int      @id @default(autoincrement())
-  createdAt     DateTime @default(now()) @map(name: "created_at")
-  updatedAt     DateTime @default(now()) @map(name: "updated_at")
+  createdAt     DateTime @default(now()) @map("created_at")
+  updatedAt     DateTime @default(now()) @map("updated_at")
   title         String   @unique
   definition    String
   published     Boolean  @default(true)
-  publishedDate DateTime @default(now()) @map(name: "published_date")
+  publishedDate DateTime @default(now()) @map("published_date")
 
-  @@map(name: "words")
+  @@map("words")
 }
