@@ -15,6 +15,6 @@ export const DarkModeSwitch: React.FunctionComponent<ColorModeSwitcherProps> = (
       variant="ghost"
       onClick={toggleColorMode}
       {...props}
-    />
+    ></IconButton>
   );
 };

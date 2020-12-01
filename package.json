@@ -10,9 +10,7 @@
     "eslint": "node ./node_modules/eslint/bin/eslint.js --ext .ts,.tsx ."
   },
   "dependencies": {
-    "@chakra-ui/icons": "^1.0.0",
-    "@chakra-ui/react": "^1.0.0",
-    "@chakra-ui/theme-tools": "1.0.0",
+    "@chakra-ui/react": "1.0.0",
     "@emotion/react": "11.1.1",
     "@emotion/styled": "11.0.0",
     "@prisma/client": "^2.12.1",

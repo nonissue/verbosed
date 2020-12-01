@@ -8,11 +8,8 @@ import {
   Text,
   useBreakpointValue,
 } from "@chakra-ui/react";
-
 import { RiMenu5Fill, RiCloseLine } from "react-icons/ri";
-
 import { useState } from "react";
-
 import { DarkModeSwitch } from ".";
 
 export const Nav: React.FunctionComponent = () => {
@@ -24,12 +21,12 @@ export const Nav: React.FunctionComponent = () => {
   const navBorderBottom = useColorModeValue("gray.200", "gray.900");
   const navColor = useColorModeValue("gray.700", "gray.200");
   const navBg = useColorModeValue(
-    "hsla(210, 30%, 99%, 0.9)",
-    "hsla(220, 25.7%, 11.7%, 0.8)"
+    "hsla(210, 30%, 99%, 0.5)",
+    "hsla(220, 25.7%, 11.7%, 0.7)"
   );
   const mobileNavBg = useColorModeValue(
-    "hsla(0, 0%, 100%, 0.5)",
-    "hsla(220, 25.7%, 11.7%, 0.1)"
+    "hsla(0, 0%, 100%, 0.4)",
+    "hsla(220, 25.7%, 11.7%, 0.5)"
   );
   const showHamburger = useBreakpointValue({
     base: "true",
@@ -56,7 +53,6 @@ export const Nav: React.FunctionComponent = () => {
         borderBottomColor: navBorderBottom,
         content: `""`,
         width: "100%",
-        // shadow: "base",
         height: "100%",
         top: "-1px",
         zIndex: "-1",
@@ -86,8 +82,8 @@ export const Nav: React.FunctionComponent = () => {
             fontWeight="800"
           >
             <Flex alignItems="center">
-              <Text>word</Text>
-              &nbsp;
+              <Text mr="1">word</Text>
+
               <Text
                 fontSize="0.69em"
                 fontStyle="italic"
@@ -97,7 +93,7 @@ export const Nav: React.FunctionComponent = () => {
                 textTransform="lowercase"
                 textDecoration="underline"
               >
-                of&nbsp;the&nbsp;Day
+                of the Day
               </Text>
             </Flex>
           </ChakraLink>
@@ -126,6 +122,7 @@ export const Nav: React.FunctionComponent = () => {
               align="right"
               alignItems="center"
               fontSize="0.9em"
+              fontWeight="600"
               textColor={navColor}
             >
               <ChakraLink href="/archive" mx={["1", "2"]}>
@@ -167,13 +164,14 @@ export const Nav: React.FunctionComponent = () => {
       >
         {mobileNavShown && (
           <Stack
+            spacing={6}
             align="center"
-            fontSize="lg"
-            fontWeight="400"
+            fontSize="xl"
+            fontWeight="600"
             maxW="min(65ch, 100%)"
             m="auto"
             px={["6", "6", "4", "4"]}
-            py="4"
+            py="6"
             direction="column"
             borderBottom="1px"
             borderBottomColor={navBorderBottom}
