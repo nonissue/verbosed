@@ -6,8 +6,12 @@ import { Footer } from "./Footer";
 import { Hero } from "./Hero";
 import { Main } from "./Main";
 import { List } from "./List";
-import { Heading } from "./Misc";
+import { Heading } from "./misc/Heading";
 
+// can do
+// export { Container } from './Container'
+// without import (instead)
+export * from "./misc";
 export {
   Container,
   Nav,

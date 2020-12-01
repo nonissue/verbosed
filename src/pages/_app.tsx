@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/ban-types */
 import { ChakraProvider } from "@chakra-ui/react";
+import Head from "next/head";
 import type { NextComponentType, NextPageContext } from "next";
 import type { NextRouter } from "next/router";
 
@@ -20,6 +21,9 @@ const MyApp: React.FunctionComponent<AppProps & AppRenderProps> = ({
 }) => {
   return (
     <ChakraProvider resetCSS theme={theme}>
+      <Head>
+        <title>WOTD</title>
+      </Head>
       <Component {...pageProps} />
     </ChakraProvider>
   );

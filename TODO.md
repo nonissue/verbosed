@@ -1,2 +1,3 @@
 - [ ] Test?
 - [ ] Animate: https://github.com/grikomsn/griko.id/commit/3e3346e1b597ce8fff8148fcca90c61bc6c3fee0
+- [ ] Move navitems to js array so they aren't duplicated between mobile/desktop

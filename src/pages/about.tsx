@@ -37,7 +37,6 @@ const About: React.FunctionComponent = () => {
             <Text fontSize="xl" pt="4" fontWeight="400" fontFamily="serif">
               Technologies
             </Text>
-            {/* <Heading title="Technologies" mb="2" fontSize="xl" /> */}
 
             <List mb="0" pt="2" fontFamily="body">
               <ListItem ml="1">

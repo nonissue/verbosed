@@ -107,7 +107,6 @@ export default class Document extends NextDocument {
             sizes="16x16"
             type="image/png"
           />
-          <title>wotd</title>
         </Head>
         <body>
           {/* Make Color mode to persists when you refresh the page. */}

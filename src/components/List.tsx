@@ -1,12 +1,19 @@
-import { Stack, Box, Accordion, Icon } from "@chakra-ui/react";
+import {
+  Stack,
+  Box,
+  Accordion,
+  Icon,
+  useColorModeValue,
+} from "@chakra-ui/react";
 import { ArchiveWordList } from "src/interfaces";
 import { BiParagraph } from "react-icons/bi";
-import { RiExternalLinkLine } from "react-icons/ri";
+import { ExternalLink } from ".";
 
 export const List: React.FunctionComponent<{ list: ArchiveWordList }> = ({
   list,
 }) => {
   let index = 0;
+  const dateColor = useColorModeValue("gray.400", "gray.500");
 
   return (
     <Stack justifyContent="center" flexDirection="column">
@@ -19,12 +26,8 @@ export const List: React.FunctionComponent<{ list: ArchiveWordList }> = ({
             <Box key={word.id} mb="4">
               <Box flex="1" textAlign={alignment} fontWeight="600">
                 {word.title}{" "}
-                <Icon
-                  aria-label="more info"
-                  as={RiExternalLinkLine}
-                  verticalAlign="text-top"
-                  color="gray.500"
-                  mt="1px"
+                <ExternalLink
+                  href={`https://dictionary.cambridge.org/dictionary/english/${word.title}`}
                 />
               </Box>
               <Box
@@ -42,6 +45,16 @@ export const List: React.FunctionComponent<{ list: ArchiveWordList }> = ({
                   display="inline"
                 />
                 {word.definition}
+              </Box>
+              <Box
+                fontSize="0.8em"
+                fontWeight="300"
+                fontFamily="body"
+                color={dateColor}
+                letterSpacing="0.2em"
+                lineHeight="1.4"
+              >
+                {word.publishedDate.split("T")[0]}
               </Box>
             </Box>
           );

@@ -7,10 +7,10 @@ import db from "prisma";
 const prisma = db.getInstance().prisma;
 
 export const getServerSideProps: GetServerSideProps = async () => {
-  let data = undefined;
+  let wordsList = undefined;
 
   try {
-    data = await prisma.word.findMany({
+    wordsList = await prisma.word.findMany({
       where: { published: true },
       orderBy: { publishedDate: "desc" },
     });
@@ -19,14 +19,16 @@ export const getServerSideProps: GetServerSideProps = async () => {
   }
 
   return {
-    props: { data: JSON.stringify(data) },
+    props: { wordsListJSON: JSON.stringify(wordsList) },
   };
 };
 
-const Archive: React.FunctionComponent<{ data: string }> = ({ data }) => {
-  const wordList: ArchiveWordList = JSON.parse(data);
+const Archive: React.FunctionComponent<{ wordsListJSON: string }> = ({
+  wordsListJSON,
+}) => {
+  const wordsList: ArchiveWordList = JSON.parse(wordsListJSON);
 
-  console.log(wordList);
+  console.log(wordsList);
 
   return (
     <Container>
@@ -38,14 +40,10 @@ const Archive: React.FunctionComponent<{ data: string }> = ({ data }) => {
         maxW="min(65ch, 100%)"
         m="auto"
       >
-        <Heading
-          title="Archive"
-          // letterSpacing="0.05em"
-          // textTransform="uppercase"
-        />
+        <Heading title="Archive" />
 
         <Box justifyItems="left" width="100%">
-          {wordList && <List list={wordList} />}
+          {wordsList && <List list={wordsList} />}
         </Box>
       </Box>
     </Container>
