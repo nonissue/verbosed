@@ -25,7 +25,7 @@ export const Nav: React.FunctionComponent = () => {
     "hsla(220, 25.7%, 11.7%, 0.7)"
   );
   const mobileNavBg = useColorModeValue(
-    "hsla(0, 0%, 100%, 0.4)",
+    "hsla(0, 0%, 100%, 0.5)",
     "hsla(220, 25.7%, 11.7%, 0.5)"
   );
   const showHamburger = useBreakpointValue({
@@ -149,10 +149,10 @@ export const Nav: React.FunctionComponent = () => {
       </Box>
       <Box
         bg={mobileNavBg}
-        w="100vw"
+        w="100%"
         position="absolute"
         _after={{
-          shadow: "md",
+          shadow: "lg",
           width: "100%",
           height: "100%",
           content: `""`,
@@ -166,12 +166,14 @@ export const Nav: React.FunctionComponent = () => {
           <Stack
             spacing={6}
             align="center"
-            fontSize="xl"
-            fontWeight="600"
+            fontSize="2xl"
+            fontFamily="serif"
+            // fontWeight="600"
             maxW="min(65ch, 100%)"
             m="auto"
             px={["6", "6", "4", "4"]}
             py="6"
+            // fontStyle="italic"
             direction="column"
             borderBottom="1px"
             borderBottomColor={navBorderBottom}
@@ -179,7 +181,7 @@ export const Nav: React.FunctionComponent = () => {
             shadow="inner"
             style={{
               backdropFilter: "blur(15px)",
-              WebkitBackdropFilter: "blur(15px)",
+              WebkitBackdropFilter: "blur(10px)",
             }}
           >
             <ChakraLink href="/archive">Archive</ChakraLink>

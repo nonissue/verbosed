@@ -27,15 +27,16 @@ export const List: React.FunctionComponent<{ list: ArchiveWordList }> = ({
               <Box flex="1" textAlign={alignment} fontWeight="600">
                 {word.title}{" "}
                 <ExternalLink
-                  href={`https://dictionary.cambridge.org/dictionary/english/${word.title}`}
+                  href={`https://en.wiktionary.org/wiki/${word.title}`}
                 />
               </Box>
               <Box
-                textAlign={alignment}
                 fontFamily="body"
                 fontSize="sm"
                 lineHeight="1.7"
                 pb="1"
+                textAlign={["justify", "left"]}
+                textJustify={["inter-character", "unset"]}
               >
                 <Icon
                   as={BiParagraph}

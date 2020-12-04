@@ -34,12 +34,11 @@ async function handleGET(res: NextApiResponse) {
 // - [x] handle collision
 async function handlePOST(req: NextApiRequest, res: NextApiResponse) {
   const { title, definition, published, publishedDate } = req.body;
-  console.log(req.body);
 
-  const formattedDate = new Date(publishedDate);
-  console.log(formattedDate);
+  const formattedDate = publishedDate ? new Date(publishedDate) : new Date();
 
   let result;
+
   try {
     result = await prisma.word.create({
       data: { title, definition, published, publishedDate: formattedDate },

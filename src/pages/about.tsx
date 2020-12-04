@@ -9,7 +9,7 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 import { Container, Nav, Heading } from "src/components";
-import { RiSubtractLine } from "react-icons/ri";
+import { RiSubtractLine, RiCheckboxBlankLine } from "react-icons/ri";
 
 const About: React.FunctionComponent = () => {
   const listDecoration = useColorModeValue("gray.400", "gray.600");
@@ -75,18 +75,7 @@ const About: React.FunctionComponent = () => {
                   Chakra-UI
                 </Link>
               </ListItem>
-              {/* <ListItem ml="1">
-                <ListIcon
-                  as={RiSubtractLine}
-                  color={listDecoration}
-                  fontWeight="300"
-                  mb="3px"
-                  verticalAlign="middle"
-                />
-                <Link href="" variant="external">
-                  React-Hook-Form
-                </Link>
-              </ListItem> */}
+
               <ListItem ml="1">
                 <ListIcon
                   as={RiSubtractLine}
@@ -153,18 +142,37 @@ const About: React.FunctionComponent = () => {
             <Text fontSize="xl" fontWeight="500" pt="4" fontFamily="serif">
               Version
             </Text>
-            <Text fontFamily="body" fontSize="" color={listDecoration} pt="2">
+            <Text fontFamily="body" fontSize="" color={creditsText} pt="2">
               0.0.1 (beta)
             </Text>
+            <Text fontSize="xl" fontWeight="500" pt="4" fontFamily="serif">
+              Todo
+            </Text>
+            <List mb="0" pt="2" fontFamily="body">
+              <ListItem ml="1">
+                <ListIcon
+                  as={RiCheckboxBlankLine}
+                  color={listDecoration}
+                  fontWeight="300"
+                  mb="3px"
+                  verticalAlign="middle"
+                />
+                {/* <Link
+                  href="http://typescriptlang.org"
+                  // color={technologyLinkColor}
+                  variant="external"
+                > */}
+                Suggestions
+                {/* </Link> */}
+              </ListItem>
+            </List>
+            <Text
+              fontFamily="body"
+              fontSize=""
+              color={creditsText}
+              pt="2"
+            ></Text>
           </Box>
-          {/* <Box pb="8">
-            <Text fontSize="xl" fontWeight="500" pt="4" fontFamily="heading">
-              Changelog
-            </Text>
-            <Text fontFamily="mono" fontSize="sm" pt="2">
-              0.1.1 (beta)
-            </Text>
-          </Box> */}
         </SimpleGrid>
       </Box>
     </Container>

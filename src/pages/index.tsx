@@ -28,7 +28,7 @@ const Index: React.FunctionComponent<{ wordJSON: string }> = ({ wordJSON }) => {
   const word: WordItem = JSON.parse(wordJSON);
 
   return (
-    <Container height="100vh" overflowY="hidden">
+    <Container height="98vh" overflowY="hidden">
       <Nav />
       <Hero word={word} />
     </Container>

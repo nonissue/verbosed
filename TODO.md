@@ -1,3 +1,10 @@
 - [ ] Test?
 - [ ] Animate: https://github.com/grikomsn/griko.id/commit/3e3346e1b597ce8fff8148fcca90c61bc6c3fee0
 - [ ] Move navitems to js array so they aren't duplicated between mobile/desktop
+- [ ] add rss
+  - [ ] generate at build time?
+  - [ ] Hmmm, need to think this through
+- [ ] Update daily with item from queue
+- [ ] Suggestions
+- [ ] API Password with bcrypt
+- [ ] Fix iOS overscroll on mainpage
