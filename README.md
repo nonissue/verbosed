@@ -14,3 +14,5 @@ A simple app that displays a word of the day. The word of the day is updated usi
 
 - [ ] Add Auth
 - [ ] Automatically update word by popping next word off pending queue
+- [ ] Add siri shortcut to readme
+- [ ] Add RSS
