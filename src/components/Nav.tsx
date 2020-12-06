@@ -12,6 +12,25 @@ import { RiMenu5Fill, RiCloseLine } from "react-icons/ri";
 import { useState } from "react";
 import { DarkModeSwitch } from ".";
 
+const navItems = [
+  {
+    url: "/archive",
+    title: "Archive",
+  },
+  {
+    url: "/suggest",
+    title: "Suggest",
+  },
+  {
+    url: "/words/queue",
+    title: "Queue",
+  },
+  {
+    url: "/about",
+    title: "About",
+  },
+];
+
 export const Nav: React.FunctionComponent = () => {
   const logoColor = useColorModeValue("gray.900", "gray.50");
   const ofthedayColor = useColorModeValue(
@@ -118,24 +137,20 @@ export const Nav: React.FunctionComponent = () => {
               />
             </Flex>
           ) : (
-            <Flex
+            <Stack
+              isInline
               align="right"
+              spacing="4"
               alignItems="center"
               fontSize="0.9em"
               fontWeight="600"
               textColor={navColor}
             >
-              <ChakraLink href="/archive" mx={["1", "2"]}>
-                Archive
-              </ChakraLink>
-
-              <ChakraLink href="/suggest" mx={["1", "3"]} marginRight="2">
-                Suggest
-              </ChakraLink>
-
-              <ChakraLink href="/about" mx={["1", "3"]} marginRight="2">
-                About
-              </ChakraLink>
+              {navItems.map((item) => (
+                <ChakraLink key={item.title} href={item.url}>
+                  {item.title}
+                </ChakraLink>
+              ))}
 
               <DarkModeSwitch
                 marginLeft="auto"
@@ -143,7 +158,7 @@ export const Nav: React.FunctionComponent = () => {
                 size="sm"
                 borderRadius="2rem"
               />
-            </Flex>
+            </Stack>
           )}
         </Flex>
       </Box>
@@ -168,12 +183,10 @@ export const Nav: React.FunctionComponent = () => {
             align="center"
             fontSize="2xl"
             fontFamily="serif"
-            // fontWeight="600"
             maxW="min(65ch, 100%)"
             m="auto"
             px={["6", "6", "4", "4"]}
             py="6"
-            // fontStyle="italic"
             direction="column"
             borderBottom="1px"
             borderBottomColor={navBorderBottom}
@@ -184,9 +197,11 @@ export const Nav: React.FunctionComponent = () => {
               WebkitBackdropFilter: "blur(10px)",
             }}
           >
-            <ChakraLink href="/archive">Archive</ChakraLink>
-            <ChakraLink href="/suggest">Suggest</ChakraLink>
-            <ChakraLink href="/about">About</ChakraLink>
+            {navItems.map((item) => (
+              <ChakraLink key={item.title} href={item.url}>
+                {item.title}
+              </ChakraLink>
+            ))}
           </Stack>
         )}
       </Box>
