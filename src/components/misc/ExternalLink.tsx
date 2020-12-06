@@ -48,8 +48,8 @@ export const ExternalLink: React.FunctionComponent<NextChakraLinkProps> = ({
           // height="0.95em"
           aria-label="more info"
           as={RiExternalLinkLine}
-          verticalAlign="text-top"
-          mt="0.15em"
+          verticalAlign="text-bottom"
+          mb="0.1em"
         />
       </ChakraLink>
     </NextLink>
