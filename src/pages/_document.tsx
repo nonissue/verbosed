@@ -15,19 +15,21 @@ export default class Document extends NextDocument {
             content="black-translucent"
           />
           <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-          <link rel="manifest" href="/manifest.json" />
+          {/* <link rel="manifest" href="/manifest.json" /> */}
           <meta name="apple-mobile-web-app-capable" content="yes" />
           <meta
             name="apple-mobile-web-app-status-bar-style"
             content="black-translucent"
           />
+
           <link rel="stylesheet" href="/fonts/inter/inter.css" />
+
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link
             href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
             rel="stylesheet"
           />
-          <meta content="/mstile-70x70.png" name="msapplication-square70x70" />
+          {/* <meta content="/mstile-70x70.png" name="msapplication-square70x70" />
           <meta
             content="/mstile-144x144.png"
             name="msapplication-square144x144"
@@ -43,7 +45,7 @@ export default class Document extends NextDocument {
           <meta
             content="/mstile-310x310.png"
             name="msapplication-square310x310"
-          />
+          /> */}
           <link
             href="/apple-touch-icon-57x57.png"
             rel="apple-touch-icon"

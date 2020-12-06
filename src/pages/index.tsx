@@ -26,8 +26,17 @@ export const getServerSideProps: GetServerSideProps = async () => {
 const Index: React.FunctionComponent<{ wordJSON: string }> = ({ wordJSON }) => {
   const word: WordItem = JSON.parse(wordJSON);
 
+  if (!word) {
+    return (
+      <Container height="98vh">
+        <Nav />
+        <div>Loading...</div>
+      </Container>
+    );
+  }
+
   return (
-    <Container height="98vh" overflowY="hidden">
+    <Container height="98vh">
       <Nav />
       <Hero word={word} />
     </Container>

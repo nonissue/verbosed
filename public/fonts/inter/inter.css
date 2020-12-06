@@ -160,6 +160,8 @@ Usage:
     html { font-family: 'Inter var', sans-serif; }
   }
 */
+
+/* 
 @font-face {
   font-family: 'Inter var';
   font-weight: 100 900;
@@ -176,7 +178,7 @@ Usage:
   font-named-instance: 'Italic';
   src: url("Inter-italic.var.woff2?v=3.15") format("woff2");
 }
-
+ */
 
 /* --------------------------------------------------------------------------
 [EXPERIMENTAL] Multi-axis, single variable font.
@@ -191,10 +193,10 @@ explicitly, e.g.
   .italic { font-variation-settings: "slnt" 10deg }
 
 */
-@font-face {
+/* @font-face {
   font-family: 'Inter var experimental';
   font-weight: 100 900;
   font-display: block;
   font-style: oblique 0deg 10deg;
   src: url("Inter.var.woff2?v=3.15") format("woff2");
-}
+} */
