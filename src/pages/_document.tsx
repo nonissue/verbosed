@@ -22,9 +22,10 @@ export default class Document extends NextDocument {
             content="black-translucent"
           />
 
-          <link rel="stylesheet" href="/fonts/inter/inter.css" />
+          <link rel="stylesheet" href="/fonts/inter/inter-swap.css" />
 
           <link rel="preconnect" href="https://fonts.gstatic.com" />
+
           <link
             href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
             rel="stylesheet"

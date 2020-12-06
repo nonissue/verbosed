@@ -44,8 +44,6 @@ export const ExternalLink: React.FunctionComponent<NextChakraLinkProps> = ({
       >
         {children}
         <Icon
-          // width="0.95em"
-          // height="0.95em"
           aria-label="more info"
           as={RiExternalLinkLine}
           verticalAlign="text-bottom"

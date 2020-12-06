@@ -16,3 +16,4 @@
   - [ ] queued -> publish === true, but waiting to be published
   - [ ] pending -> publish === false, not sure if i want them to be published publically
 - [ ] Better Hero component BG
+- [ ] Improve performance

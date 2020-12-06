@@ -3,9 +3,9 @@ import {
   Flex,
   IconButton,
   Stack,
-  useColorModeValue,
   Box,
   Text,
+  useColorModeValue,
   useBreakpointValue,
 } from "@chakra-ui/react";
 import { RiMenu5Fill, RiCloseLine } from "react-icons/ri";
@@ -43,10 +43,12 @@ export const Nav: React.FunctionComponent = () => {
     "hsla(210, 30%, 99%, 0.5)",
     "hsla(220, 25.7%, 11.7%, 0.7)"
   );
+
   const mobileNavBg = useColorModeValue(
     "hsla(0, 0%, 100%, 0.5)",
     "hsla(220, 25.7%, 11.7%, 0.5)"
   );
+
   const showHamburger = useBreakpointValue({
     base: "true",
     sm: "false",

@@ -28,8 +28,6 @@ const Archive: React.FunctionComponent<{ wordsListJSON: string }> = ({
 }) => {
   const wordsList: ArchiveWordList = JSON.parse(wordsListJSON);
 
-  console.log(wordsList);
-
   return (
     <Container>
       <Nav />

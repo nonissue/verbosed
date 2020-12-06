@@ -38,6 +38,7 @@ const heading = [
   "Inter",
   "-apple-system",
   "BlinkMacSystemFont",
+  "sans-serif",
   "'Segoe UI'",
   "Roboto",
   "Oxygen",
@@ -59,7 +60,6 @@ const theme = extendTheme({
   components: {
     Link: {
       variants: {
-        // these both work!
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         link: (props: any) => ({
           color: mode("blue.700", "blue.300")(props),
