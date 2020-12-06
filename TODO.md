@@ -8,3 +8,7 @@
 - [ ] Suggestions
 - [ ] API Password with bcrypt
 - [ ] Fix iOS overscroll on mainpage
+- [ ] Hook up queue filter
+- [ ] Two types of 'backlog'
+  - [ ] queued -> publish === true, but waiting to be published
+  - [ ] pending -> publish === false, not sure if i want them to be published publically

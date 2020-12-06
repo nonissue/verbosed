@@ -1,4 +1,4 @@
-import { Box } from "@chakra-ui/react";
+import { Box, Text } from "@chakra-ui/react";
 import { Container, Nav, Heading } from "src/components";
 import { GetServerSideProps } from "next";
 import { WordItem } from "src/interfaces";
@@ -28,7 +28,24 @@ const WordPage: React.FunctionComponent<{ wordJSON: string }> = ({
 }) => {
   const word: WordItem = JSON.parse(wordJSON);
 
-  console.log(word);
+  if (!word) {
+    return (
+      <Container>
+        <Nav />
+
+        <Box
+          px={["6", "6", "4", "4"]}
+          width="100vw"
+          maxW="min(65ch, 100%)"
+          m="auto"
+        >
+          <Heading title="Error" />
+
+          <Text>Word not found</Text>
+        </Box>
+      </Container>
+    );
+  }
 
   return (
     <Container>
@@ -40,11 +57,11 @@ const WordPage: React.FunctionComponent<{ wordJSON: string }> = ({
         maxW="min(65ch, 100%)"
         m="auto"
       >
-        <Heading title="Word" />
+        <Heading title={word.title} />
 
-        <Box justifyItems="left" width="100%">
+        {/* <Box justifyItems="left" width="100%">
           {word.title}
-        </Box>
+        </Box> */}
         <Box justifyItems="left" width="100%">
           {word.definition}
         </Box>

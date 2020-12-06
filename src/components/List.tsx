@@ -36,7 +36,7 @@ export const List: React.FunctionComponent<{ list: ArchiveWordList }> = ({
                 lineHeight="1.7"
                 pb="1"
                 textAlign={["justify", "left"]}
-                textJustify={["inter-character", "unset"]}
+                // textJustify={["inter-character", "unset"]}
               >
                 <Icon
                   as={BiParagraph}

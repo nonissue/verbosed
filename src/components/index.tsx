@@ -5,13 +5,15 @@ import { DarkModeSwitch } from "./DarkModeSwitch";
 import { Footer } from "./Footer";
 import { Hero } from "./Hero";
 import { Main } from "./Main";
+// import { Queue } from "./Queue";
 import { List } from "./List";
-import { Heading } from "./misc/Heading";
+// import { Heading } from "./misc/Heading";
 
 // can do
 // export { Container } from './Container'
 // without import (instead)
 export * from "./misc";
+export { Queue } from "./Queue";
 export {
   Container,
   Nav,
@@ -21,5 +23,4 @@ export {
   Main,
   List,
   NextChakraLink,
-  Heading,
 };

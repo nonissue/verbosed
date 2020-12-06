@@ -1,5 +1,14 @@
-import { Box } from "@chakra-ui/react";
-import { Container, Nav, List, Heading } from "src/components";
+import {
+  Box,
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuOptionGroup,
+  MenuDivider,
+  MenuItemOption,
+  Button,
+} from "@chakra-ui/react";
+import { Container, Nav, Queue, Heading } from "src/components";
 import { GetServerSideProps } from "next";
 import { ArchiveWordList } from "src/interfaces";
 
@@ -27,8 +36,7 @@ const Archive: React.FunctionComponent<{ queuedWordsListJSON: string }> = ({
   queuedWordsListJSON,
 }) => {
   const queuedWordsList: ArchiveWordList = JSON.parse(queuedWordsListJSON);
-
-  console.log(queuedWordsList);
+  // useReducer for options state?
 
   return (
     <Container>
@@ -40,10 +48,49 @@ const Archive: React.FunctionComponent<{ queuedWordsListJSON: string }> = ({
         maxW="min(65ch, 100%)"
         m="auto"
       >
-        <Heading title="Queue" />
+        <Box display="flex" alignItems="center">
+          <Heading title="Queue" />
 
+          <Menu
+            closeOnSelect={false}
+            preventOverflow={true}
+            placement="bottom-end"
+          >
+            <MenuButton as={Button} size="xs" variant="filter">
+              Options
+            </MenuButton>
+            <MenuList
+              py="0"
+              minWidth={["80vw", "200px"]}
+              fontSize="sm"
+              borderRadius="2px"
+              shadow="xl"
+            >
+              <MenuOptionGroup
+                title="Status"
+                type="checkbox"
+                onChange={(value) => console.log(value)}
+                defaultValue={["pending", "queued"]}
+              >
+                <MenuItemOption value="pending">Pending</MenuItemOption>
+                <MenuItemOption value="queued" type="checkbox">
+                  Queued
+                </MenuItemOption>
+              </MenuOptionGroup>
+              <MenuDivider />
+              <MenuOptionGroup defaultValue="asc" title="Sort On" type="radio">
+                <MenuItemOption value="asc">Date Added</MenuItemOption>
+                <MenuItemOption value="desc">Title</MenuItemOption>
+              </MenuOptionGroup>
+              <MenuOptionGroup defaultValue="asc" title="Order" type="radio">
+                <MenuItemOption value="asc">Ascending</MenuItemOption>
+                <MenuItemOption value="desc">Descending</MenuItemOption>
+              </MenuOptionGroup>
+            </MenuList>
+          </Menu>
+        </Box>
         <Box justifyItems="left" width="100%">
-          {queuedWordsList && <List list={queuedWordsList} />}
+          {queuedWordsList && <Queue list={queuedWordsList} />}
         </Box>
       </Box>
     </Container>
