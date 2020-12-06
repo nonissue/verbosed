@@ -1,6 +1,6 @@
 // import { Hero } from "../components/Hero";
 import { Flex, Heading } from "@chakra-ui/react";
-import { Container, Nav } from "../components";
+import { Container, Nav } from "src/components";
 
 const Custom404: React.FunctionComponent = () => (
   <Container height="100vh">

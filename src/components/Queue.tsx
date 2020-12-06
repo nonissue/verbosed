@@ -30,7 +30,7 @@ export const Queue: React.FunctionComponent<{ list: ArchiveWordList }> = ({
               justifyContent="space-between"
               textAlign={alignment}
               alignItems="center"
-              mb="4"
+              mb="2"
             >
               <Box fontSize="2xl" fontFamily="serif">
                 {word.title}{" "}

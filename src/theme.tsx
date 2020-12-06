@@ -77,7 +77,7 @@ const theme = extendTheme({
         filter: (props: any) => ({
           color: mode("gray.50", "gray.900")(props),
           background: mode("gray.900", "gray.50")(props),
-          boxShadow: mode("base", "base")(props),
+          boxShadow: mode("sm", "lg")(props),
           fontFamily: "mono",
           fontWeight: "normal",
           borderRadius: "1.5em",

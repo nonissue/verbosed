@@ -33,10 +33,10 @@ const navItems = [
 
 export const Nav: React.FunctionComponent = () => {
   const logoColor = useColorModeValue("gray.900", "gray.50");
-  const ofthedayColor = useColorModeValue(
-    "hsla(213.75, 30.25%, 35.0%, 1)",
-    "hsla(213.75, 20.25%, 75.0%, 1)"
-  );
+  // const ofthedayColor = useColorModeValue(
+  //   "hsla(213.75, 30.25%, 35.0%, 1)",
+  //   "hsla(213.75, 20.25%, 75.0%, 1)"
+  // );
   const navBorderBottom = useColorModeValue("gray.200", "gray.900");
   const navColor = useColorModeValue("gray.700", "gray.200");
   const navBg = useColorModeValue(
@@ -99,13 +99,13 @@ export const Nav: React.FunctionComponent = () => {
             fontSize={["1.5em", "1.35em"]}
             letterSpacing="-0.05em"
             lineHeight="1"
-            _hover={{ textDecoration: "none", opacity: 0.6 }}
             fontWeight="800"
+            _hover={{ textDecoration: "none", opacity: 0.9 }}
           >
             <Flex alignItems="center">
-              <Text mr="1">word</Text>
+              <Text mr="1">verbosed</Text>
 
-              <Text
+              {/* <Text
                 fontSize="0.69em"
                 fontStyle="italic"
                 fontWeight="400"
@@ -115,7 +115,7 @@ export const Nav: React.FunctionComponent = () => {
                 textDecoration="underline"
               >
                 of the Day
-              </Text>
+              </Text> */}
             </Flex>
           </ChakraLink>
 
@@ -181,11 +181,13 @@ export const Nav: React.FunctionComponent = () => {
       >
         {mobileNavShown && (
           <Stack
+            maxW="min(65ch, 100%)"
             spacing={6}
             align="center"
             fontSize="2xl"
-            fontFamily="serif"
-            maxW="min(65ch, 100%)"
+            fontFamily="body"
+            fontWeight="400"
+            letterSpacing="0.01em"
             m="auto"
             px={["6", "6", "4", "4"]}
             py="6"

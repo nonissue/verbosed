@@ -7,6 +7,7 @@ import {
   MenuDivider,
   MenuItemOption,
   Button,
+  useColorModeValue,
 } from "@chakra-ui/react";
 import { Container, Nav, Queue, Heading } from "src/components";
 import { GetServerSideProps } from "next";
@@ -61,10 +62,20 @@ const Archive: React.FunctionComponent<{ queuedWordsListJSON: string }> = ({
             </MenuButton>
             <MenuList
               py="0"
-              minWidth={["80vw", "200px"]}
+              // minWidth={["80vw", "200px"]}
               fontSize="sm"
-              borderRadius="2px"
+              borderRadius="8px"
               shadow="xl"
+              background={useColorModeValue("white", "gray.800")}
+              // background={useColorModeValue(
+              //   "hsla(0, 0%, 99%, 0.1)",
+              //   "hsla(0, 0%, 10%, 0.1)"
+              // )}
+              // background="hsla(0, 0%, 90%, 0.5)"
+              style={{
+                backdropFilter: "blur(15px)",
+                WebkitBackdropFilter: "blur(15px)",
+              }}
             >
               <MenuOptionGroup
                 title="Status"
