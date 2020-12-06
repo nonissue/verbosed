@@ -27,12 +27,12 @@ const About: React.FunctionComponent = () => {
       >
         <Heading title="About" />
 
-        <Text fontSize="sm" lineHeight="1.6" mb="4" fontStyle="italic">
+        <Text fontSize="md" lineHeight="1.6" mb="4" fontStyle="italic">
           A collection of words that I may or may not find interesting and that
           I may or may not understand.
         </Text>
 
-        <SimpleGrid columns={[1, null, 3, 3]} spacing={[2, 2, 10, 10]}>
+        <SimpleGrid columns={[1, 3, 3, 3]} spacing={[2, 2, 10, 10]}>
           <Box>
             <Text fontSize="xl" pt="4" fontWeight="400" fontFamily="serif">
               Technologies
@@ -145,6 +145,8 @@ const About: React.FunctionComponent = () => {
             <Text fontFamily="body" fontSize="" color={creditsText} pt="2">
               0.0.1 (beta)
             </Text>
+          </Box>
+          <Box>
             <Text fontSize="xl" fontWeight="500" pt="4" fontFamily="serif">
               Todo
             </Text>
@@ -157,21 +159,19 @@ const About: React.FunctionComponent = () => {
                   mb="3px"
                   verticalAlign="middle"
                 />
-                {/* <Link
-                  href="http://typescriptlang.org"
-                  // color={technologyLinkColor}
-                  variant="external"
-                > */}
                 Suggestions
-                {/* </Link> */}
+              </ListItem>
+              <ListItem ml="1">
+                <ListIcon
+                  as={RiCheckboxBlankLine}
+                  color={listDecoration}
+                  fontWeight="300"
+                  mb="3px"
+                  verticalAlign="middle"
+                />
+                RSS Support
               </ListItem>
             </List>
-            <Text
-              fontFamily="body"
-              fontSize=""
-              color={creditsText}
-              pt="2"
-            ></Text>
           </Box>
         </SimpleGrid>
       </Box>

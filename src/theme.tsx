@@ -73,6 +73,7 @@ const theme = extendTheme({
     },
     Button: {
       variants: {
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         filter: (props: any) => ({
           color: mode("gray.50", "gray.900")(props),
           background: mode("gray.900", "gray.50")(props),

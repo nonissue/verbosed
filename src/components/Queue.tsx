@@ -1,20 +1,20 @@
 import {
   Stack,
   Box,
-  Icon,
+  // Icon,
   Button,
   useColorModeValue,
   Divider,
 } from "@chakra-ui/react";
 import { ArchiveWordList } from "src/interfaces";
-import { BiParagraph } from "react-icons/bi";
+// import { BiParagraph } from "react-icons/bi";
 import { ExternalLink } from ".";
 
 export const Queue: React.FunctionComponent<{ list: ArchiveWordList }> = ({
   list,
 }) => {
   let index = 0;
-  const dateColor = useColorModeValue("gray.400", "gray.500");
+  const dateColor = useColorModeValue("gray.500", "gray.500");
 
   return (
     <Stack justifyContent="center" flexDirection="column">
@@ -40,7 +40,7 @@ export const Queue: React.FunctionComponent<{ list: ArchiveWordList }> = ({
               </Box>
               <Button
                 size="xs"
-                borderRadius="2px"
+                borderRadius="4px"
                 variant="outline"
                 colorScheme="gray"
                 shadow="sm"
@@ -85,13 +85,13 @@ export const Queue: React.FunctionComponent<{ list: ArchiveWordList }> = ({
                 textAlign={["justify", "left"]}
                 // textJustify={["inter-character", "unset"]}
               >
-                <Icon
+                {/* <Icon
                   as={BiParagraph}
                   mr="1"
                   ml="1"
                   color="gray.400"
                   display="inline"
-                />
+                /> */}
                 {word.definition}
               </Box>
             </Box>

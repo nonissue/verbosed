@@ -1,6 +1,6 @@
-- [ ] Test?
+- [ ] Tests?
 - [ ] Animate: https://github.com/grikomsn/griko.id/commit/3e3346e1b597ce8fff8148fcca90c61bc6c3fee0
-- [ ] Move navitems to js array so they aren't duplicated between mobile/desktop
+- [x] Move navitems to js array so they aren't duplicated between mobile/desktop
 - [ ] add rss
   - [ ] generate at build time?
   - [ ] Hmmm, need to think this through
@@ -8,7 +8,11 @@
 - [ ] Suggestions
 - [ ] API Password with bcrypt
 - [ ] Fix iOS overscroll on mainpage
-- [ ] Hook up queue filter
+- [x] Add queue page
+- [x] Add filter/options control to queue page
+- [ ] Protect queue page with auth
+- [ ] Make queue filter/options work
 - [ ] Two types of 'backlog'
   - [ ] queued -> publish === true, but waiting to be published
   - [ ] pending -> publish === false, not sure if i want them to be published publically
+- [ ] Better Hero component BG
