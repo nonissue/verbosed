@@ -71,6 +71,26 @@ const theme = extendTheme({
         }),
       },
     },
+    Button: {
+      variants: {
+        filter: (props: any) => ({
+          color: mode("gray.50", "gray.900")(props),
+          background: mode("gray.900", "gray.50")(props),
+          boxShadow: mode("base", "base")(props),
+          fontFamily: "mono",
+          fontWeight: "normal",
+          borderRadius: "1.5em",
+          px: "1.1em",
+          py: "1em",
+          _active: {
+            background: "gray.200",
+            color: "gray.900",
+            boxShadow: "outline",
+          },
+          _focus: { boxShadow: mode("lg", "xl")(props) },
+        }),
+      },
+    },
   },
   fonts: {
     body: sans,
