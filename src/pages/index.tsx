@@ -24,7 +24,6 @@ export const getServerSideProps: GetServerSideProps = async () => {
 
 // fetch latest word
 const Index: React.FunctionComponent<{ wordJSON: string }> = ({ wordJSON }) => {
-  // console.log(wordJSON);
   const word: WordItem = JSON.parse(wordJSON);
 
   return (

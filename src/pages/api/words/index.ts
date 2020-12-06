@@ -41,7 +41,12 @@ async function handlePOST(req: NextApiRequest, res: NextApiResponse) {
 
   try {
     result = await prisma.word.create({
-      data: { title, definition, published, publishedDate: formattedDate },
+      data: {
+        title: title.toLowerCase(),
+        definition,
+        published,
+        publishedDate: formattedDate,
+      },
     });
   } catch (error) {
     if (error.code === "P2002") {
