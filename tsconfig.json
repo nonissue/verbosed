@@ -19,9 +19,7 @@
     "target": "esnext",
     "baseUrl": ".",
     "paths": {
-      "@/prisma/*": [
-        "primsa/*"
-      ]
+      "@/prisma/*": ["primsa/*"]
     }
   },
   "exclude": ["node_modules", ".next", ".vercel", "public", "assets"],
