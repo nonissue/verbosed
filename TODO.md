@@ -19,3 +19,4 @@
 - [ ] Improve performance 
   - [ ] Up to 64 Perf @ 3:10 am
   - [ ] weird because weightandsee.xyz scores a 77 with blocking fonts
+- [ ] Buy `verbosed` domain
