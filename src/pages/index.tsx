@@ -1,8 +1,8 @@
-import { Container, Hero, Nav } from "../components";
+import { Container, Hero, Nav } from "src/components";
 import { GetServerSideProps } from "next";
 import { WordItem } from "src/interfaces";
 
-import db from "prisma";
+import db from "prisma/index";
 const prisma = db.getInstance().prisma;
 
 export const getServerSideProps: GetServerSideProps = async () => {
