@@ -118,7 +118,12 @@ export const Nav: React.FunctionComponent = () => {
           </ChakraLink>
 
           {showHamburger === "true" ? (
-            <Flex align="right" alignItems="center" textColor={navColor}>
+            <Flex
+              align="right"
+              alignItems="center"
+              textColor={navColor}
+              aria-label="mobile-nav"
+            >
               <DarkModeSwitch
                 marginLeft="auto"
                 p="1"
@@ -145,6 +150,7 @@ export const Nav: React.FunctionComponent = () => {
               fontSize="0.9em"
               fontWeight="600"
               textColor={navColor}
+              aria-label="desktop-nav"
             >
               {navItems.map((item) => (
                 <ChakraLink key={item.title} href={item.url}>

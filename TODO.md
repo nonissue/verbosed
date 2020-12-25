@@ -16,3 +16,12 @@
   - [ ] queued -> publish === true, but waiting to be published
   - [ ] pending -> publish === false, not sure if i want them to be published publically
 - [ ] Better Hero component BG
+
+## Testing
+
+- [ ] Figure out how to mock prisma: https://github.com/ctrlplusb/prisma-pg-jest/blob/master/prisma/prisma-test-environment.js
+- [ ] https://github.com/ctrlplusb/prisma-pg-jest
+- [ ] https://medium.com/@welcomebachar/prisma-node-typescript-jest-mongodb-tdd-ooomg-%EF%B8%8F-4c9be0b0ff2e
+- [ ] https://github.com/prisma/prisma-examples/blob/24e77665ef2f3b87d2e419fbd4304296b423c1e8/typescript/postgis-express/prisma/test-environment.js
+- [ ] https://brettfisher.dev/how-to-test-responsive-components/
+- [ ] Resizing window: https://spectrum.chat/testing-library/help/how-to-test-in-different-screen-sizes-media-query~880bae6f-6bc9-460a-a397-85cbb8fd637e
