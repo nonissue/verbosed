@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/ban-types */
+import { RecoilRoot } from "recoil";
 import { ChakraProvider } from "@chakra-ui/react";
 import Head from "next/head";
 import type { NextComponentType, NextPageContext } from "next";
@@ -20,12 +21,14 @@ const MyApp: React.FunctionComponent<AppProps & AppRenderProps> = ({
   pageProps,
 }) => {
   return (
-    <ChakraProvider resetCSS theme={theme}>
-      <Head>
-        <title>WOTD</title>
-      </Head>
-      <Component {...pageProps} />
-    </ChakraProvider>
+    <RecoilRoot>
+      <ChakraProvider resetCSS theme={theme}>
+        <Head>
+          <title>WOTD</title>
+        </Head>
+        <Component {...pageProps} />
+      </ChakraProvider>
+    </RecoilRoot>
   );
 };
 

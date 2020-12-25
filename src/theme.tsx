@@ -80,7 +80,7 @@ const theme = extendTheme({
           boxShadow: mode("sm", "lg")(props),
           fontFamily: "mono",
           fontWeight: "normal",
-          borderRadius: "1.5em",
+          borderRadius: "4px",
           px: "1.1em",
           py: "1em",
           _active: {

@@ -6,10 +6,7 @@
     "forceConsistentCasingInFileNames": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "lib": [
-      "dom",
-      "es2017"
-    ],
+    "lib": ["dom", "es2017"],
     "module": "esnext",
     "moduleResolution": "node",
     "noEmit": true,
@@ -20,17 +17,11 @@
     "skipLibCheck": true,
     "strict": true,
     "target": "esnext",
-    "baseUrl": "."
+    "baseUrl": ".",
+    "paths": {
+      "@/prisma/*": ["primsa/*"]
+    }
   },
-  "exclude": [
-    "node_modules",
-    ".next",
-    ".vercel",
-    "public",
-    "assets"
-  ],
-  "include": [
-    "**/*.ts",
-    "**/*.tsx"
-  ]
+  "exclude": ["node_modules", ".next", ".vercel", "public", "assets"],
+  "include": ["**/*.ts", "**/*.tsx", "setupTests.js"]
 }
