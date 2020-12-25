@@ -8,8 +8,6 @@ export const Hero: React.FunctionComponent<{ word: WordItem }> = ({ word }) => {
   const dateColor = useColorModeValue("gray.400", "gray.600");
   const svgOpacity = useColorModeValue(4, 0.5);
 
-  console.log(word);
-
   return (
     <Box
       backgroundImage={`url("data:image/svg+xml,%3Csvg preserveAspectRatio='none' viewBox='0 0 500 500' xmlns='http://www.w3.org/2000/svg' width='100%25' id='blobSvg'%3E%3Cdefs%3E%3ClinearGradient id='gradient' x1='0%25' y1='0%25' x2='0%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color: rgba(45, 55, 72, ${

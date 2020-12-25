@@ -19,7 +19,8 @@
     "next": "latest",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "react-icons": "^4.1.0"
+    "react-icons": "^4.1.0",
+    "recoil": "^0.1.2"
   },
   "devDependencies": {
     "@prisma/cli": "^2.12.1",

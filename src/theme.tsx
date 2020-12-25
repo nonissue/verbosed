@@ -75,12 +75,12 @@ const theme = extendTheme({
       variants: {
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         filter: (props: any) => ({
-          color: mode("gray.50", "gray.900")(props),
-          background: mode("gray.900", "gray.50")(props),
+          // color: mode("gray.50", "gray.900")(props),
+          // borderColor: mode("gray.500", "gray.50")(props),
           boxShadow: mode("base", "base")(props),
           fontFamily: "mono",
           fontWeight: "normal",
-          borderRadius: "1.5em",
+          borderRadius: "4px",
           px: "1.1em",
           py: "1em",
           _active: {

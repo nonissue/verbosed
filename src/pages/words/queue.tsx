@@ -56,19 +56,31 @@ const Archive: React.FunctionComponent<{ queuedWordsListJSON: string }> = ({
             preventOverflow={true}
             placement="bottom-end"
           >
-            <MenuButton as={Button} size="xs" variant="filter">
+            <MenuButton
+              as={Button}
+              size="xs"
+              px="3"
+              fontWeight="bold"
+              // variant="outline"
+              colorScheme="blue"
+              borderRadius="4px"
+              shadow="md"
+            >
               Options
             </MenuButton>
             <MenuList
-              py="0"
-              minWidth={["80vw", "200px"]}
+              borderRadius="0em"
+              // py="2"
+              minWidth={["60vw", "200px"]}
               fontSize="sm"
-              borderRadius="2px"
+              // borderRadius="2px"
               shadow="xl"
             >
               <MenuOptionGroup
                 title="Status"
+                mt="2px"
                 type="checkbox"
+                // my="0"
                 onChange={(value) => console.log(value)}
                 defaultValue={["pending", "queued"]}
               >
