@@ -2,6 +2,9 @@
 
 A simple app that displays a word of the day. The word of the day is updated using a Siri Shortcut from iOS.
 
+---
+
+[https://verbosed.vercel.app](https://verbosed.vercel.app)
 ## Technologies
 
 - Prisma
