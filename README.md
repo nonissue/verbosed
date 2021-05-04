@@ -1,4 +1,4 @@
-# WOTD: Word of the Day
+# Verbosed: A Word a Day
 
 A simple app that displays a word of the day. The word of the day is updated using a Siri Shortcut from iOS.
 
